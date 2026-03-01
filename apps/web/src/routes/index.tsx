@@ -1,7 +1,7 @@
 import { convexQuery } from "@convex-dev/react-query";
 import { useQuery } from "@tanstack/react-query";
 import { createFileRoute } from "@tanstack/react-router";
-import { api } from "@tmp/backend/convex/_generated/api";
+import { api } from "@rate-my-coach/backend/convex/_generated/api";
 
 export const Route = createFileRoute("/")({
   component: HomeComponent,

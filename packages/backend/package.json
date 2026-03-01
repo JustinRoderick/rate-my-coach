@@ -1,5 +1,5 @@
 {
-  "name": "@tmp/backend",
+  "name": "@rate-my-coach/backend",
   "version": "1.0.0",
   "description": "",
   "license": "ISC",
@@ -16,7 +16,7 @@
     "zod": "catalog:"
   },
   "devDependencies": {
-    "@tmp/config": "workspace:*",
+    "@rate-my-coach/config": "workspace:*",
     "@types/node": "^24.3.0",
     "typescript": "catalog:"
   }

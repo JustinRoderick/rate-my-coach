@@ -1,4 +1,4 @@
-import { api } from "@tmp/backend/convex/_generated/api";
+import { api } from "@rate-my-coach/backend/convex/_generated/api";
 import { useQuery } from "convex/react";
 
 import {
@@ -19,7 +19,9 @@ export default function UserMenu() {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger render={<Button variant="outline" />}>{user?.name}</DropdownMenuTrigger>
+      <DropdownMenuTrigger render={<Button variant="outline" />}>
+        {user?.name}
+      </DropdownMenuTrigger>
       <DropdownMenuContent className="bg-card">
         <DropdownMenuGroup>
           <DropdownMenuLabel>My Account</DropdownMenuLabel>

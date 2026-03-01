@@ -1,5 +1,5 @@
 {
-  "name": "@tmp/infra",
+  "name": "@rate-my-coach/infra",
   "private": true,
   "type": "module",
   "scripts": {
@@ -12,7 +12,7 @@
     "zod": "catalog:"
   },
   "devDependencies": {
-    "@tmp/config": "workspace:*",
+    "@rate-my-coach/config": "workspace:*",
     "alchemy": "catalog:",
     "typescript": "catalog:"
   }

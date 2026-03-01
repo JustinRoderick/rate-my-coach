@@ -1,5 +1,5 @@
 {
-  "name": "@tmp/env",
+  "name": "@rate-my-coach/env",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -12,8 +12,8 @@
     "zod": "catalog:"
   },
   "devDependencies": {
-    "@tmp/config": "workspace:*",
-    "@tmp/infra": "workspace:*",
+    "@rate-my-coach/config": "workspace:*",
+    "@rate-my-coach/infra": "workspace:*",
     "typescript": "catalog:"
   }
 }

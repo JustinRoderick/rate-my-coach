@@ -5,7 +5,7 @@ import { config } from "dotenv";
 config({ path: "./.env" });
 config({ path: "../../apps/web/.env" });
 
-const app = await alchemy("tmp");
+const app = await alchemy("rate-my-coach");
 
 export const web = await TanStackStart("web", {
   cwd: "../../apps/web",

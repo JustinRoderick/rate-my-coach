@@ -1,4 +1,4 @@
-# tmp
+# rate-my-coach
 
 This project was created with [Better-T-Stack](https://github.com/AmanVarshney01/create-better-t-stack), a modern TypeScript stack that combines React, TanStack Start, Convex, and more.
 
@@ -57,7 +57,7 @@ For more details, see the guide on [Deploying to Cloudflare with Alchemy](https:
 ## Project Structure
 
 ```
-tmp/
+rate-my-coach/
 ├── apps/
 │   ├── web/         # Frontend application (React + TanStack Start)
 ├── packages/

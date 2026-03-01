@@ -1,5 +1,5 @@
 {
-  "name": "tmp",
+  "name": "rate-my-coach",
   "private": true,
   "workspaces": {
     "packages": [
@@ -23,20 +23,20 @@
     "check-types": "turbo check-types",
     "dev:native": "turbo -F native dev",
     "dev:web": "turbo -F web dev",
-    "dev:server": "turbo -F @tmp/backend dev",
-    "dev:setup": "turbo -F @tmp/backend dev:setup",
-    "deploy": "turbo -F @tmp/infra deploy",
-    "destroy": "turbo -F @tmp/infra destroy",
+    "dev:server": "turbo -F @rate-my-coach/backend dev",
+    "dev:setup": "turbo -F @rate-my-coach/backend dev:setup",
+    "deploy": "turbo -F @rate-my-coach/infra deploy",
+    "destroy": "turbo -F @rate-my-coach/infra destroy",
     "check": "oxlint && oxfmt --write"
   },
   "dependencies": {
-    "@tmp/env": "workspace:*",
+    "@rate-my-coach/env": "workspace:*",
     "dotenv": "catalog:",
     "zod": "catalog:"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20251213.0",
-    "@tmp/config": "workspace:*",
+    "@rate-my-coach/config": "workspace:*",
     "oxfmt": "^0.26.0",
     "oxlint": "^1.41.0",
     "turbo": "^2.6.3",

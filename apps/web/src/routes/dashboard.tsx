@@ -1,6 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { api } from "@tmp/backend/convex/_generated/api";
-import { Authenticated, AuthLoading, Unauthenticated, useQuery } from "convex/react";
+import { api } from "@rate-my-coach/backend/convex/_generated/api";
+import {
+  Authenticated,
+  AuthLoading,
+  Unauthenticated,
+  useQuery,
+} from "convex/react";
 import { useState } from "react";
 
 import SignInForm from "@/components/sign-in-form";
