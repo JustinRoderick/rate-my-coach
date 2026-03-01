@@ -1,37 +1,39 @@
-import { authClient } from "@/lib/auth-client";
-import { useTRPC } from "@/utils/trpc";
-import { useQuery } from "@tanstack/react-query";
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect } from "react";
+import { api } from "@tmp/backend/convex/_generated/api";
+import { Authenticated, AuthLoading, Unauthenticated, useQuery } from "convex/react";
+import { useState } from "react";
+
+import SignInForm from "@/components/sign-in-form";
+import SignUpForm from "@/components/sign-up-form";
+import UserMenu from "@/components/user-menu";
 
 export const Route = createFileRoute("/dashboard")({
   component: RouteComponent,
 });
 
 function RouteComponent() {
-  const navigate = Route.useNavigate();
-  const trpc = useTRPC();
-  const { data: session, isPending } = authClient.useSession();
-
-  const privateData = useQuery(trpc.privateData.queryOptions());
-
-  useEffect(() => {
-    if (!session && !isPending) {
-      navigate({
-        to: "/login",
-      });
-    }
-  }, [session, isPending]);
-
-  if (isPending) {
-    return <div>Loading...</div>;
-  }
+  const [showSignIn, setShowSignIn] = useState(false);
+  const privateData = useQuery(api.privateData.get);
 
   return (
-    <div>
-      <h1>Dashboard</h1>
-      <p>Welcome {session?.user.name}</p>
-      <p>privateData: {privateData.data?.message}</p>
-    </div>
+    <>
+      <Authenticated>
+        <div>
+          <h1>Dashboard</h1>
+          <p>privateData: {privateData?.message}</p>
+          <UserMenu />
+        </div>
+      </Authenticated>
+      <Unauthenticated>
+        {showSignIn ? (
+          <SignInForm onSwitchToSignUp={() => setShowSignIn(false)} />
+        ) : (
+          <SignUpForm onSwitchToSignIn={() => setShowSignIn(true)} />
+        )}
+      </Unauthenticated>
+      <AuthLoading>
+        <div>Loading...</div>
+      </AuthLoading>
+    </>
   );
 }

@@ -1,13 +1,10 @@
 import { Link } from "@tanstack/react-router";
 
-import UserMenu from "./user-menu";
-
 export default function Header() {
   const links = [
     { to: "/", label: "Home" },
-      { to: "/dashboard", label: "Dashboard" },
-    { to: "/ai", label: "AI Chat" },
-  ];
+    { to: "/dashboard", label: "Dashboard" },
+  ] as const;
 
   return (
     <div>
@@ -15,18 +12,13 @@ export default function Header() {
         <nav className="flex gap-4 text-lg">
           {links.map(({ to, label }) => {
             return (
-              <Link
-                key={to}
-                to={to}
-              >
+              <Link key={to} to={to}>
                 {label}
               </Link>
             );
           })}
         </nav>
-        <div className="flex items-center gap-2">
-          <UserMenu />
-        </div>
+        <div className="flex items-center gap-2"></div>
       </div>
       <hr />
     </div>
