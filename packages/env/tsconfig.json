@@ -1,3 +1,6 @@
 {
-  "extends": "@rate-my-coach/config/tsconfig.base.json"
+  "extends": "@rate-my-coach/config/tsconfig.base.json",
+  "compilerOptions": {
+    "types": []
+  }
 }
