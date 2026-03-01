@@ -1,26 +1,4 @@
- ╭───────────────────────────────────────────────────────────────────────╮
- │                                                                       │
- │  Next steps                                                           │
- │  1. cd rate-my-coach                                                            │
- │  2. bun run dev:setup                                                 │
- │     (this will guide you through Convex project setup)                │
- │  3. Copy environment variables from                                   │
- │     packages/backend/.env.local to apps/*/.env                        │
- │  4. bun run dev                                                       │
- │                                                                       │
- │  Your project will be available at:                                   │
- │  • Frontend: http://localhost:3001                                    │
- │                                                                       │
- │  Linting and formatting:                                              │
- │  • Format and lint fix: bun run check                                 │
- │                                                                       │
- │  Deploy web with Cloudflare (Alchemy):                                │
- │  • Dev: cd apps/web && bun run alchemy dev                            │
- │  • Deploy: cd apps/web && bun run deploy                              │
- │  • Destroy: cd apps/web && bun run destroy                            │
- │                                                                       │
- │  Better Auth + Convex Setup:                                          │
- │  • Set environment variables from packages/backend:                   │
- │     cd packages/backend                                               │
- │     bun convex env set BETTER_AUTH_SECRET=$(openssl rand -base64 32)  │
- │     bun convex env set SITE_URL http://localhost:3001
+│  Deploy web with Cloudflare (Alchemy):                                │
+│  • Dev: cd apps/web && bun run alchemy dev                            │
+│  • Deploy: cd apps/web && bun run deploy                              │
+│  • Destroy: cd apps/web && bun run destroy                            │
